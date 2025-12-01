@@ -1,0 +1,33 @@
+//Accept string from user and do following operations
+//Input: Hello
+//Output:   H   e   l   l   o
+import java.util.Scanner;
+
+class StringX
+{
+    public void Display(String str)
+    {
+        int iCnt = 0;
+        char Arr[] = str.toCharArray();
+
+        for(iCnt = 0; iCnt < Arr.length; iCnt++)
+        {
+            System.out.println(Arr[iCnt]);
+        }
+    }
+}
+
+class program248
+{
+    public static void main(String Args[])
+    {
+        Scanner scanobj = new Scanner(System.in);
+
+        System.out.println("Enter String: ");
+        String sobj = scanobj.nextLine();
+
+        StringX strobj = new StringX();
+        strobj.Display(sobj);
+        
+    }
+}
