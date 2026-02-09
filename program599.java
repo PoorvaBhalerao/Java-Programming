@@ -1,0 +1,16 @@
+// File Packer - 36
+
+import java.io.*;
+import java.util.*;
+
+class program599
+{
+    public static void main(String A[]) throws Exception    // we can write in try-catch
+    {
+        String str = "Python Java Data Structure";        
+
+        String Arr[] = str.split(" ");
+        
+        System.out.println(Arr.length);
+    }
+}
