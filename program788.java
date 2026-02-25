@@ -1,0 +1,72 @@
+//Matrix codes
+//Accept number of rows and columns from user accept elements and display it
+
+import java.util.*;
+
+class Matrix
+{
+    public int iRow;
+    public int iCol;
+    public int Arr[][];
+
+    public Matrix(int a, int b)
+    {
+        this.iRow = a;
+        this.iCol = b;
+        this.Arr = new int[iRow][iCol];
+    }
+
+    public void Accept()
+    {
+        int i = 0, j = 0;
+        Scanner sobj = new Scanner(System.in);
+        System.out.println("Enter the elements of matrix:");
+
+        for(i = 0; i < this.iRow; i++)
+        {
+            for(j = 0; j< this.iCol; j++)
+            {
+                Arr[i][j]= sobj.nextInt();
+            }
+        }
+        sobj.close();
+    }
+
+    public void Display()
+    {
+        int i = 0, j = 0;
+        System.out.println("Elements of Marix are:");
+
+        for(i = 0; i < this.iRow; i++)
+        {
+            for(j = 0; j< this.iCol; j++)
+            {
+                System.out.print(Arr[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+class program788
+{
+    public static void main(String a[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter number of rows: ");
+        int R = sobj.nextInt();
+
+        System.out.println("Enter number of columns: ");
+        int C = sobj.nextInt();
+        
+        Matrix mobj = new Matrix(R, C);
+
+        mobj.Accept();
+        mobj.Display();
+
+
+        sobj.close();
+    }
+}
